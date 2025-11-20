@@ -1,6 +1,5 @@
 # SmartWork – Estação IoT de Bem-Estar para o Futuro do Trabalho  
 ### Global Solution 2025 – FIAP  
-### ESP32 • IoT • MQTT • Sensores • Automação • Futuro do Trabalho
 
 - João Pedro Saborido | RM: 98184 
 - Matheus Haruo | RM: 97663
