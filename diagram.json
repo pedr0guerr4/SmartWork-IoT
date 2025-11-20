@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "author": "Pedro - SmartWork",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -14.5, "left": 14.2, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -134.1,
+      "left": 205.8,
+      "attrs": { "temperature": "20.3", "humidity": "52" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 80, "left": -220, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -224,
+      "left": -215.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 60,
+      "left": 261,
+      "attrs": { "volume": "0.3", "mode": "smooth" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 159.8,
+      "left": -28.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 160,
+      "left": 40,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledR",
+      "top": 159.6,
+      "left": 243.8,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-led", "id": "ledG", "top": 200, "left": 220, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "ledB",
+      "top": 236.4,
+      "left": 205.4,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "h-48", "v163.2" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v57.6", "h-134.1" ] ],
+    [ "dht1:SDA", "esp:D15", "magenta", [ "h0.1", "v144.2" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h153.6", "v28.5" ] ],
+    [ "ldr1:AO", "esp:D34", "green", [ "h57.6", "v-86.9" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "v172.8", "h249.6" ] ],
+    [ "lcd1:VCC", "esp:VIN", "red", [ "v105.7", "h230.4", "v220.8" ] ],
+    [ "lcd1:SCL", "esp:D22", "blue", [ "v125.1", "h345.9" ] ],
+    [ "lcd1:SDA", "esp:D21", "violet", [ "v115.4", "h355.2", "v106" ] ],
+    [ "bz1:1", "esp:GND.2", "black", [ "v8.8", "h-227.8" ] ],
+    [ "bz1:2", "esp:D5", "orange", [ "h-103.4", "v-87.2" ] ],
+    [ "btn1:1", "esp:D13", "yellow", [] ],
+    [ "btn1:2", "esp:GND.1", "black", [] ],
+    [ "btn2:1", "esp:D14", "yellow", [] ],
+    [ "btn2:2", "esp:GND.1", "black", [] ],
+    [ "ledR:A", "esp:D18", "red", [ "h-100.2", "v-134.8" ] ],
+    [ "ledR:K", "esp:GND.1", "black", [] ],
+    [ "ledG:A", "esp:D19", "green", [ "h-120.2", "v-184.3" ] ],
+    [ "ledG:K", "esp:GND.1", "black", [] ],
+    [ "ledB:A", "esp:D23", "blue", [ "h-90.6", "v-272.5" ] ],
+    [ "ledB:K", "esp:GND.1", "black", [] ],
+    [ "ledG:C", "esp:GND.1", "green", [ "h-23.8", "v-21.2", "h-95.7" ] ],
+    [ "ledR:C", "esp:GND.1", "green", [ "h-28.4", "v-67.1" ] ],
+    [ "ledB:C", "esp:GND.1", "green", [ "h-66.8", "v-143.9" ] ]
+  ],
+  "serialMonitor": { "display": "terminal", "newline": "lf" },
+  "dependencies": {}
+}
