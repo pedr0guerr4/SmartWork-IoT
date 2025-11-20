@@ -9,6 +9,8 @@
 
 ## 📘 Visão Geral
 
+https://wokwi.com/projects/448104556174809089
+
 O **SmartWork** é uma estação IoT inteligente desenvolvida para monitorar **conforto térmico**, **iluminação**, **tempo de foco**, **alertas de fadiga** e **bem-estar geral** em ambientes de estudo ou trabalho híbridos.  
 A solução demonstra como tecnologias IoT podem transformar o **Futuro do Trabalho**, promovendo saúde, autonomia e produtividade.
 
